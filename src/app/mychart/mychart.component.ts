@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart, registerables } from 'node_modules/chart.js';
 import { ChartService } from '../chart.service';
+import { Observable } from 'rxjs';
 Chart.register(...registerables);
 
 @Component({
@@ -15,7 +16,7 @@ export class MychartComponent implements OnInit {
   labelData: any[] = [];
   realData: any[] = [];
   color: any[] = [];
-
+  
   ngOnInit(): void {
     this.chatService.GetChartInfo().subscribe({
       next: (res) => {

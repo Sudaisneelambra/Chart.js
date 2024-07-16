@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MychartComponent } from './mychart/mychart.component';
 import { HttpClientModule } from "@angular/common/http";
+import { HigherChartsComponent } from './higher-charts/higher-charts.component';
+import { ChartModule } from 'angular-highcharts';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MychartComponent
+    MychartComponent,
+    HigherChartsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
